@@ -25,8 +25,7 @@ This repository contains the code and notebook used to identify the **Regenerati
 
 ### Run in Colab
 1. Click the **Open in Colab** badge above.
-2. Download cleaned_processed_frogtail.h5ad  and `aav9996_tables3.xlsx` files
-3. Upload `cleaned_processed_frogtail.h5ad` and `aav9996_tables3.xlsx` to 'content' folder.
-4. Run all cells. Figures/CSVs will be written to `figures/` and `outputs/`.
+2. Before running the code, you need to upload `cleaned_processed_frogtail.h5ad` and `aav9996_tables3.xlsx` to 'content' folder.
+3. Run all cells. Figures/CSVs will be written to `figures/` and `outputs/`.
 
 
