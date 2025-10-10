@@ -10,6 +10,7 @@ This repository contains the code and notebook used to identify the **Regenerati
 
 ## What's inside
 - **`frog_and_tail.ipynb`** — main Colab notebook (fully reproducible).
+- **`project_report.pdf`** - final written report summarizing methods, results, and conclusions.
 - **`figures/`** — key plots (created on run), e.g.
   - `umap_Figure1_clustering.png`
   - `umap_Figure2_ROCscore.png`, `violin_Figure2_ROCscore_violin.png`
