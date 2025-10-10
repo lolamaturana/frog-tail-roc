@@ -1,0 +1,6 @@
+metric,value
+supp_genes_in_matrix,40.0
+baseline_topN,50.0
+overlap,2.0
+jaccard,0.022727272727272728
+hypergeom_p,0.002664727021543372

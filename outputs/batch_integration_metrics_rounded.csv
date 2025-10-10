@@ -1,0 +1,4 @@
+variant,ARI_vs_baseline,NMI_vs_baseline,Silhouette_clusters,Silhouette_batch
+baseline,1.0,1.0,0.252,-0.066
+harmony,0.8,0.889,0.264,-0.069
+bbknn,0.871,0.914,0.353,-0.066

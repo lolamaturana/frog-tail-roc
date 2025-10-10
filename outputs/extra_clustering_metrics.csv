@@ -1,0 +1,5 @@
+metric,value
+Davies–Bouldin (lower better),1.2271003753437444
+Calinski–Harabasz (higher better),1559.79442152725
+UMAP trustworthiness (higher better),0.981194107592096
+Graph modularity (higher better),0.8788736427778161
