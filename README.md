@@ -1,6 +1,6 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Columbia_University_1754.svg" width="400" valign="left">
 
-# Single-Cell Profiling of Frog Tail Regeneration 🐸🧬
+# Single-Cell Profiling of Frog Tail Regeneration
 **Identifying Regenerative Organizing Cells (ROC) in *Xenopus laevis***
   
 ---
