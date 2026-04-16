@@ -1,35 +1,47 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Columbia_University_1754.svg" width="400" valign="left">
 
-# Single-cell profiling of frog tail regeneration identifies ROC markers
-
-**Author:** María Dolores Navarro Maturana (Lola) — mn3312
-
-(https://colab.research.google.com/drive/1ZEFRZO5GRudCBl7NQhhmSN5nyY40UvkT?usp=sharing)
-
-This repository contains the code and notebook used to identify the **Regenerative Organizing Cell (ROC)** in *Xenopus laevis* tail single-cell RNA-seq data, reproduce Fig. 1B-like views, and compare ROC markers to Supplementary Table 3. It implements two clustering algorithms (Leiden & Louvain), two marker methods (Wilcoxon & logistic regression), two denoising strategies (MAGIC & PCA low-rank), and two batch-integration methods (Harmony & BBKNN), with metrics and figures saved to disk.
-
----
-
-## What's inside
-- **`frog_and_tail.ipynb`** — main Colab notebook (fully reproducible).
-- **`project_report.pdf`** - final written report summarizing methods, results, and conclusions.
-- **`figures/`** — key plots (created on run), e.g.
-  - `umap_Figure1_clustering.png`
-  - `umap_Figure2_ROCscore.png`, `violin_Figure2_ROCscore_violin.png`
-  - `umap_part11_magic_small.png`, `umap_part11_pca_small.png`
-  - `umap_harmony.png`, `umap_bbknn.png`
-  - `umap_Figure1B_broad_tissue.png`, `umap_Figure1B_skin_only_polished.png`
-- **`outputs/*.csv`** — metrics and marker tables (created on run), e.g.
-  - `extra_clustering_metrics.csv`, `denoise_metrics_compare.csv`
-  - `batch_integration_metrics_rounded.csv`
-  - `compare_supptable3_metrics_top100.csv`
+<div align="center">
+  
+  # Single-Cell Profiling of Frog Tail Regeneration 🐸🧬
+  **Identifying Regenerative Organizing Cells (ROC) in *Xenopus laevis***
+  
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ZEFRZO5GRudCBl7NQhhmSN5nyY40UvkT?usp=sharing)
+</div>
 
 ---
 
-### Run in Colab
-1. Click the **Open in Colab** badge above.
-2. Download the data `cleaned_processed_frogtail.h5ad` (https://drive.google.com/file/d/1boRVP8VCptxxvfEEjlg8OW4xUFQbgn--/view) and `aav9996_tables3.xlsx` (https://www.science.org/doi/full/10.1126/science.aav9996)
-3. Before running the code, you need to upload `cleaned_processed_frogtail.h5ad` and `aav9996_tables3.xlsx` to 'content' folder.
-4. Run all cells. Figures/CSVs will be written to `figures/` and `outputs/`.
+## 👤 Author
+**María Dolores Navarro Maturana (Lola)** — `mn3312`
 
+## 🔬 Project Overview
+This project presents an end-to-end computational pipeline to analyze single-cell RNA sequencing (scRNA-seq) data from the regenerating tail of *Xenopus laevis*. The primary biological objective is to computationally identify and characterize the **Regenerative Organizing Cell (ROC)** population and reproduce key findings (such as Figure 1B) from the original literature.
 
+To ensure robustness, the pipeline systematically compares multiple computational strategies across the scRNA-seq workflow:
+* **Clustering Algorithms:** Leiden vs. Louvain 
+* **Marker Gene Discovery:** Wilcoxon Rank-Sum vs. Logistic Regression
+* **Data Denoising:** MAGIC vs. PCA Low-Rank Approximations
+* **Batch Effect Integration:** Harmony vs. BBKNN
+
+## 📂 Repository Structure
+
+* 📓 **`frog_and_tail.ipynb`**: The main Jupyter/Colab notebook. Fully reproducible pipeline from raw counts to final visualizations.
+* 📄 **`project_report.pdf`**: Comprehensive final report summarizing the methodology, quantitative metrics, biological results, and conclusions.
+* 📁 **`figures/`**: Auto-generated visualizations produced by the pipeline:
+  * UMAP projections (`umap_Figure1_clustering.png`, `umap_Figure1B_skin_only_polished.png`, etc.)
+  * Feature scoring and distributions (`violin_Figure2_ROCscore_violin.png`)
+  * Batch integration & denoising comparisons (`umap_harmony.png`, `umap_part11_magic_small.png`, etc.)
+* 📁 **`outputs/`**: Tabular data, statistical metrics, and marker tables generated during execution (e.g., `batch_integration_metrics_rounded.csv`, `compare_supptable3_metrics_top100.csv`).
+
+## 🚀 Quick Start: Run in Colab
+
+You can run the entire analysis in the cloud without local environment setup.
+
+1. **Open the Notebook:** Click the [Open in Colab](https://colab.research.google.com/drive/1ZEFRZO5GRudCBl7NQhhmSN5nyY40UvkT?usp=sharing) badge at the top of this README.
+2. **Download Required Data:**
+   * Single-cell count data: [`cleaned_processed_frogtail.h5ad`](https://drive.google.com/file/d/1boRVP8VCptxxvfEEjlg8OW4xUFQbgn--/view)
+   * Ground truth marker tables: [`aav9996_tables3.xlsx`](https://www.science.org/doi/full/10.1126/science.aav9996) (From *Science* Supplementary Materials).
+3. **Upload to Colab:** Drag and drop both downloaded files into the `/content` folder in the Colab file explorer (left sidebar).
+4. **Execute:** Run all cells (`Runtime` > `Run all`). The pipeline will automatically generate and save all plots into a `figures/` directory and CSVs into an `outputs/` directory within the Colab environment.
+
+## 📚 References
+* Aztekin, C., et al. (2019). *"Identification of a regeneration-organizing cell in the Xenopus tail."* Science.
