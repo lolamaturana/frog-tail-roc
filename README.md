@@ -1,3 +1,5 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Columbia_University_1754.svg" width="400" valign="left">
+
 # Single-cell profiling of frog tail regeneration identifies ROC markers
 
 **Author:** María Dolores Navarro Maturana (Lola) — mn3312
